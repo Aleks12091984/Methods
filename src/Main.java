@@ -8,12 +8,15 @@ public class Main {
         int a = kb.nextInt();
         int b = kb.nextInt();
 
-        int c = Sum(a, b);
+        int c = Math.Sum(a, b);
         System.out.println("%d + %d = %d". formatted(a, b, c));
-        System.out.println("%d - %d = %d". formatted(a, b, Diff(a, b)));
-        System.out.println("%d * %d = %d". formatted(a, b, Prod(a, b)));
-        System.out.println("%d / %d = %f". formatted(a, b, Quot(a, b)));
+        System.out.println("%d - %d = %d". formatted(a, b, Math.Diff(a, b)));
+        System.out.println("%d * %d = %d". formatted(a, b, Math.Prod(a, b)));
+        System.out.println("%d / %d = %f". formatted(a, b, Math.Quot(a, b)));
     }
+}
+class Math
+{
     static int Sum(int a, int b)
     {
         // Sum - сумма
@@ -33,6 +36,6 @@ public class Main {
     static double Quot(int a, int b)
     {
         // Quotient - Частное
-        return (double) a / b;
+        return (double)a / b;
     }
 }
