@@ -13,6 +13,8 @@ public class Main {
         System.out.println("%d - %d = %d". formatted(a, b, Diff(a, b)));
         System.out.println("%d * %d = %d". formatted(a, b, Prod(a, b)));
         System.out.println("%d / %d = %f". formatted(a, b, Quot(a, b)));
+        System.out.println("%d! = %d\n".   formatted(a, Fact(a)));
+        System.out.println("%d ^ %d = %d". formatted(a, b, Pow(a, b)));
     }
     static int Sum(int a, int b)
     {
@@ -34,5 +36,25 @@ public class Main {
     {
         // Quotient - Частное
         return (double) a / b;
+    }
+
+    static int Fact(int a)
+    {
+        if (a == 1)
+        {
+            return 1;
+        }
+        return a * Fact(a - 1);
+    }
+    static int Pow(int a, int b)
+    {
+        if ( b == 0)
+            return 1;
+
+        if ( b == 1)
+            return a;
+
+        return Pow ( a * a, b/2);
+
     }
 }
